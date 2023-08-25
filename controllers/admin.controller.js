@@ -11,8 +11,6 @@ async function getProducts(req, res) {
   }
 }
 
-function getNewProduct(req, res) {}
-
 async function createNewProducts(req, res, next) {
   const product = new Product({
     ...req.body,

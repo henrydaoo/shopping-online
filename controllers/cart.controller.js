@@ -24,7 +24,7 @@ function getCart(req, res) {
   res.render("../views/customer/cart/cart.ejs");
 }
 
-async function updateCart(req, res) {
+function updateCart(req, res) {
   const quantity = req.body.quantity;
   const productId = req.body.productId;
   const cart = res.locals.cart;

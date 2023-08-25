@@ -17,7 +17,7 @@ class Order {
     }
   }
 
-  async save() {
+  save() {
     const orderData = {
       userData: this.userData,
       productData: this.productData,
