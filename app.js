@@ -2,7 +2,11 @@ const express = require("express");
 const path = require("path");
 const session = require("express-session");
 
-const PORT = process.env.PORT || 3000;
+let port = 3000;
+
+if (process.env.PORT) {
+  port = process.env.PORT;
+}
 
 const app = express();
 const db = require("./data/database");
@@ -45,7 +49,7 @@ app.use(notFoundHandleMiddleware);
 
 db.connectToDatabase()
   .then(function () {
-    app.listen(PORT);
+    app.listen(port);
   })
   .catch(function (error) {
     console.log("Fail to connect to database");

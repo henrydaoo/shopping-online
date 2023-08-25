@@ -8,8 +8,8 @@ if (process.env.MONGODB_URL) {
 
 let database;
 
-async function connectToDatabase(mongodbUrl) {
-  const client = new MongoClient();
+async function connectToDatabase() {
+  const client = new MongoClient(mongodbUrl);
   await client.connect();
   database = client.db("online-shop");
 
