@@ -1,0 +1,42 @@
+<%- include("../../shared/includes/head.ejs", {pageTitle: product.title }) %>
+    <link rel="stylesheet" href="/styles/products.css">
+    <script src="/scripts/cart-management.js" defer></script>
+    </head>
+
+    <body>
+        <%- include('../../shared/includes/header.ejs') %>
+            <main>
+                <div id="product-details">
+                    <div id="product-info">
+                        <div id="product-image">
+                            <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                        </div>
+                        <div id="product-main-info">
+                            <h2>
+                                <%= product.title %>
+                            </h2>
+                            <h2>
+                                Price: <%= product.price %> vnd
+                            </h2>
+                            <button class="btn btn-success" data-id=<%=product.id %>
+                                >Add to cart</button>
+                            <hr>
+                            <div>
+                                <b>Summary:</b>
+                                <p class="summary">
+                                    <%= product.summary %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="product-description">
+                        <h2>Product Details</h2>
+                        <p>
+                            <%= product.description %>
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <%- include("../../shared/includes/footer.ejs") %>

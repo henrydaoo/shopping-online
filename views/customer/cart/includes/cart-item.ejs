@@ -1,0 +1,21 @@
+<li>
+    <article class="cart-item">
+        <form class="cart-item-mangement" data-productid="<%= cart.product.id %>">
+            <div id="product-infor">
+                <img id="image-preview" src="<%= cart.product.imageUrl %>" alt="<%= cart.product.title %>">
+                <p id="product-title"><b>
+                        <%= cart.product.title %>
+                    </b>
+                </p>
+                <p><span class="cart-product-price">(<%= cart.product.price %> vnd)</span></p>
+            </div>
+            <div id="cart-infor">
+                <input type="number" required value="<%= cart.quantity %>">
+                <span class="cart-item-price">
+                    <%= cart.totalPrice.toFixed(2) %>vnd
+                </span>
+                <button class="btn btn btn-secondary" data-productid="<%= cart.product.id %>">Update</button>
+            </div>
+        </form>
+    </article>
+</li>

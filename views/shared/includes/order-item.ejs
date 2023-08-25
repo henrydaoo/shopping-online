@@ -1,0 +1,38 @@
+<article>
+    <header class="order-summary">
+        <h2><span class="order-item-price">
+                Total: <%= order.productData.totalPrice.toFixed(2) %>vnd
+        </h2>
+        <h2>
+            </span>
+            <%= order.formattedDate %>
+        </h2>
+    </header>
+
+    <section class="order-details">
+        <% if (locals.isAdmin) { %>
+            <div id="customer-infor">
+                <p>Email: <%= order.userData.email %>
+                </p>
+                <p>Address:
+                    <%= order.userData.street %> street,
+                        <%= order.userData.city %> city
+                </p>
+            </div>
+            <% } %>
+                <ul>
+                    <% for (const item of order.productData.items) { %>
+                        <li class="price-per-product">
+                            <p>
+                                <%= item.product.title %>
+                            </p>
+                            <p>
+                                (<%= item.product.price.toFixed(2) %>vnd x <%= item.quantity %>) <%=
+                                            item.totalPrice.toFixed(2) %>vnd
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+    </section>
+
+</article>

@@ -1,0 +1,50 @@
+<%- include("../../shared/includes/head.ejs", {pageTitle: 'Sign Up' }) %>
+    <link rel="stylesheet" href="/styles/auth.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    </head>
+
+    <body>
+        <main>
+            <h1>Create New Account</h1>
+            <% if(inputData.errorMessage){ %>
+                <p class="alert">
+                    <%= inputData.errorMessage %>
+                </p>
+                <% } %>
+                    <form action="/signup" method="POST" class="form">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control" id="email"
+                                value="<%= inputData.email %>" required>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control"
+                                value="<%= inputData.password %>" id="password">
+                        </div>
+                        <div>
+                            <label for="fullname">Full Name</label>
+                            <input type="text" name="fullname" class="form-control" id="fullname"
+                                value="<%= inputData.fullname %>" required>
+                        </div>
+                        <div>
+                            <label for="street">Street</label>
+                            <input type="text" name="street" class="form-control" id="street"
+                                value="<%= inputData.street %>" required>
+                        </div>
+                        <div>
+                            <label for="city">City</label>
+                            <input type="text" name="city" class="form-control" id="city" value="<%= inputData.city %>"
+                                required>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </div>
+                        <div>
+                            <a href="/login">Log in instead</a>
+                        </div>
+                    </form>
+        </main>
+    </body>
+
+    </html>

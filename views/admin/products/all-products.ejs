@@ -1,0 +1,30 @@
+<%- include("../../shared/includes/head.ejs", {pageTitle: 'All Products' }) %>
+    <link rel="stylesheet" href="/styles/products.css">
+    <script src="/scripts/product-management.js" defer></script>
+    </head>
+
+    <body>
+        <%- include('../../shared/includes/header.ejs') %>
+            <main>
+                <h1>Product Administration</h1>
+                <section>
+                    <div class="title">
+                        <h2>Manage Products</h2>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Add New Product
+                        </button>
+                    </div>
+                    <%- include("../products/new-product.ejs")%>
+                </section>
+                <section>
+                    <ul class="product-grid">
+                        <% for(const product of products){ %>
+                            <li>
+                                <%- include('../../shared/includes/product-item.ejs', {product: product}) %>
+                            </li>
+                            <% } %>
+                    </ul>
+                </section>
+            </main>
+            <%- include("../../shared/includes/footer.ejs") %>

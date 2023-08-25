@@ -1,0 +1,70 @@
+.order-item {
+  border-radius: 15px;
+  box-shadow: 0 1px 1px 2px #8080802e;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.order-summary h2,
+.order-summary p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+ol#order-items {
+  list-style: none;
+  padding: 0;
+}
+
+.order-item-price {
+  color: rgb(50, 72, 48);
+}
+
+.order-item .status {
+  display: flex;
+  min-width: 15rem;
+}
+
+.order-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-details li {
+  margin-bottom: 1rem;
+  padding: 0rem 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 2px #c3c3c32e;
+}
+
+.price-per-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#customer-infor {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: rgb(87, 131, 82);
+  font-weight: bold;
+}
+
+@media (min-width: 48rem) {
+  .order-summary {
+    flex-direction: row;
+  }
+}

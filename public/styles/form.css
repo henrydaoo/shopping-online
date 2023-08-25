@@ -1,0 +1,42 @@
+.form {
+  padding: 2rem;
+  background-color: #e3e6f3;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.462);
+  margin: auto;
+  max-width: 25rem;
+}
+
+.form label {
+  font-weight: bold;
+}
+
+.form .btn {
+  margin: 1rem 0;
+  border: none;
+}
+
+.form .btn:hover {
+  background-color: rgb(67, 175, 243);
+}
+
+.form a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form a:hover {
+  color: rgb(67, 175, 243);
+}
+
+@media (min-width: 48rem) {
+  .form {
+    padding: 2rem;
+    background-color: #e3e6f3;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.462);
+    width: 30%;
+    margin: auto;
+    max-width: 25rem;
+  }
+}

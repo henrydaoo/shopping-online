@@ -1,0 +1,13 @@
+<%- include("../../shared/includes/head.ejs", {pageTitle: 'Your Orders' }) %>
+    <link rel="stylesheet" href="/styles/products.css">
+    <link rel="stylesheet" href="/styles/orders.css">
+    <script src="/scripts/order-management.js defer"></script>
+    </head>
+
+    <body>
+        <%- include('../../shared/includes/header.ejs') %>
+            <main>
+                <h1>All Orders</h1>
+                <%- include('../../shared/includes/order-list.ejs') %>
+            </main>
+            <%- include("../../shared/includes/footer.ejs") %>

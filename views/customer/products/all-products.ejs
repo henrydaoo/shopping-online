@@ -1,0 +1,82 @@
+<%- include("../../shared/includes/head.ejs", {pageTitle: 'Shopping Online' }) %>
+    <link rel="stylesheet" href="/styles/products.css">
+    </head>
+
+    <body>
+        <%- include('../../shared/includes/header.ejs') %>
+            <section class="main-image">
+                <div id="preview-content">
+                    <p class="small-content">
+                        Trade-in-offer
+                    </p>
+                    <p class="big-content green">
+                        Super value deals
+                    </p>
+                    <p class="big-content green">
+                        On all products
+                    </p>
+                    <p id="shop-button" class="small-content">
+                        <a href="#all-products">Shop Now</a>
+                    </p>
+                </div>
+            </section>
+            <section id="features">
+                <div class="feature">
+                    <div>
+                        <img src="/images/f1.png" alt="f1">
+                    </div>
+                    <p>Free Shipping</p>
+                </div>
+                <div class="feature">
+                    <div>
+                        <img src="/images/f2.png" alt="f2">
+                    </div>
+                    <p>Online Order</p>
+                </div>
+                <div class="feature">
+                    <div>
+                        <img src="/images/f3.png" alt="f3">
+                    </div>
+                    <p>Save Money</p>
+                </div>
+                <div class="feature">
+                    <div>
+                        <img src="/images/f4.png" alt="f4">
+                    </div>
+                    <p>Promotions</p>
+                </div>
+                <div class="feature">
+                    <div>
+                        <img src="/images/f5.png" alt="f5">
+                    </div>
+                    <p>Happy Sell</p>
+                </div>
+            </section>
+            <section id="all-products" class="products-section">
+                <h1>All product</h1>
+                <ul class="product-grid">
+                    <% for(const product of products){ %>
+                        <li>
+                            <%- include('../../shared/includes/product-item.ejs', {product: product}) %>
+                        </li>
+                        <% } %>
+                </ul>
+            </section>
+            <section class="banner">
+                <div class="content-banner">
+                    <p>Repair Services</p>
+                    <h2>
+                        Up to <span>70% Off</span> - All t-Shirsts & Accessories
+                    </h2>
+                </div>
+            </section>
+            <section class="products-section">
+                <ul class="product-grid">
+                    <% for(const product of products){ %>
+                        <li>
+                            <%- include('../../shared/includes/product-item.ejs', {product: product}) %>
+                        </li>
+                        <% } %>
+                </ul>
+            </section>
+            <%- include("../../shared/includes/footer.ejs") %>

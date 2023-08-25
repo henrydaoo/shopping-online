@@ -1,0 +1,39 @@
+<%- include('../../shared/includes/head.ejs', {pageTitle: 'Cart' }) %>
+    <link rel="stylesheet" href="/styles/products.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <script src="/scripts/product-management.js" defer></script>
+    <script src="/scripts/cart-item-management.js" defer></script>
+    </head>
+
+    <body>
+        <%- include('../../shared/includes/header.ejs') %>
+            <main>
+                <h1>Your Cart</h1>
+                <ul id="cart-items">
+                    <% if(locals.cart.items.length){ %>
+                        <% for(const cart of locals.cart.items) {%>
+                            <%- include("includes/cart-item.ejs", {cart: cart}) %>
+                                <% } %>
+                                    <% } else { %>
+                                        <h2 id="empty-cart">You have nothing in your shopping cart</h2>
+                                        <% } %>
+                </ul>
+                <div id="total-price">
+                    <p id="total">Total: <%= locals.cart.totalPrice.toFixed(2) %>vnd</p>
+                    <% if(locals.isAuth && locals.cart.items.length>0) {%>
+                        <form action="/orders" method="POST">
+                            <button class="btn">Buy Products</button>
+                        </form>
+                        <% } %>
+                            <% if(locals.isAuth && locals.cart.items.length===0) {%>
+
+                                <a href="/" class="btn">Continue Shopping</a>
+                                <% }%>
+                                    <%if(!locals.isAuth ) { %>
+                                        <a id="total-callback" href="/login">Please log in to proceed and purchase</a>
+                                        <% } %>
+                </div>
+
+
+            </main>
+            <%- include('../../shared/includes/footer.ejs') %>

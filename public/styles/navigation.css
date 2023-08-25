@@ -1,0 +1,19 @@
+.navbar {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.container-fluid {
+  font-weight: bold;
+}
+
+.navbar {
+  padding: 1rem 0rem;
+}
+
+@media (max-width: 48rem) {
+  ul.navbar-nav.me-2.mb-2.mb-lg-0 {
+    text-align: center;
+    align-items: center;
+  }
+}
