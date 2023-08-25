@@ -82,7 +82,6 @@ async function getOrders(req, res, next) {
 
 module.exports = {
   getProducts: getProducts,
-  getNewProduct: getNewProduct,
   createNewProducts: createNewProducts,
   getUpdateProduct: getUpdateProduct,
   updateProduct: updateProduct,
