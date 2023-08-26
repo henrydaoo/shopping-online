@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-let mongodbUrl = "mongodb://0.0.0.0:27017/";
+let mongodbUrl = "mongodb://127.0.0.1:27017/";
 
 if (process.env.MONGODB_URL) {
   mongodbUrl = process.env.MONGODB_URL;
@@ -9,7 +9,9 @@ if (process.env.MONGODB_URL) {
 let database;
 
 async function connectToDatabase() {
-  const client = new MongoClient(mongodbUrl);
+  const client = new MongoClient(
+    "mongodb+srv://duythong:m8u8eqo1zpRRz6oP@database.apzn3yo.mongodb.net/online-shop?retryWrites=true&w=majority"
+  );
   await client.connect();
   database = client.db("online-shop");
 
