@@ -17,7 +17,8 @@ async function addOrder(req, res, next) {
   try {
     userDocument = await User.findById(res.locals.user);
   } catch (error) {
-    return next(error);
+    next(error);
+    return;
   }
 
   const cart = res.locals.cart;
