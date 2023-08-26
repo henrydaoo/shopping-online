@@ -9,7 +9,9 @@ if (process.env.MONGODB_URL) {
 let database;
 
 async function connectToDatabase() {
-  const client = new MongoClient(mongodbUrl);
+  const client = new MongoClient(
+    "mongodb+srv://duythong:22521429@database.apzn3yo.mongodb.net/database?retryWrites=true&w=majority"
+  );
   try {
     await client.connect();
     database = client.db("online-shop");
