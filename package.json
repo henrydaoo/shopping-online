@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": ">=14 <15"
+  },
   "name": "shopping-online",
   "version": "1.0.0",
   "description": "",
