@@ -7,7 +7,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node --unhandled-rejections=strict app.js"
   },
   "author": "",
   "license": "ISC",
