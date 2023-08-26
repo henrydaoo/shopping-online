@@ -3,7 +3,7 @@ function isEmpty(value) {
 }
 
 function userCredentialAreValid(email, password) {
-  return email && password && password.trim().length >= 6;
+  return email && password && password.length >= 6;
 }
 
 function userDetailAraValid(email, password, name, street, city) {

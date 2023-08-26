@@ -37,6 +37,7 @@ async function signUp(req, res, next) {
     street: req.body.street,
     city: req.body.city,
   };
+  console.log("this is post data", enterData);
   if (
     !userValidation.userDetailAraValid(
       req.body.email,

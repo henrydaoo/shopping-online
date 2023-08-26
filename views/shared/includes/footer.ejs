@@ -15,10 +15,13 @@
     </div>
     <div>
         <h3>My Account</h3>
-        <p><a href="/login">Sign In</a></p>
-        <p><a href="/cart">View Cart</a></p>
-        <p><a href="/orders">My Order</a></p>
-        <p>Help</p>
+        <% if(!locals.isAuth){ %>
+            <p><a href="/login">Sign In</a></p>
+            <% } else { %>
+                <p><a href="/cart">View Cart</a></p>
+                <p><a href="/orders">My Order</a></p>
+                <% } %>
+                    <p>Help</p>
     </div>
     <div>
         <h3>Folow us</h3>

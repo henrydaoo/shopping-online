@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const session = require("express-session");
+require("dotenv").config();
 
 let port = 3000;
 
@@ -49,7 +50,7 @@ app.use(notFoundHandleMiddleware);
 
 db.connectToDatabase()
   .then(function () {
-    app.listen(port);
+    app.listen(3000);
   })
   .catch(function (error) {
     console.log("Fail to connect to database");
