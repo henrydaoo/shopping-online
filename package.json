@@ -7,7 +7,7 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node --unhandled-rejections=strict app.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
