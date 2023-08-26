@@ -10,13 +10,8 @@ let database;
 
 async function connectToDatabase() {
   const client = new MongoClient(mongodbUrl);
-  try {
-    await client.connect();
-    database = client.db("online-shop");
-  } catch (error) {
-    next(error);
-    return;
-  }
+  await client.connect();
+  database = client.db("online-shop");
 
   return "done.";
 }
