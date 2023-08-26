@@ -49,7 +49,6 @@ class Order {
       .find({ "userData._id": uid })
       .sort({ _id: -1 })
       .toArray();
-    console.log("this is order from order models", orders);
 
     return this.transformOrderDocuments(orders);
   }
