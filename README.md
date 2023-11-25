@@ -5,11 +5,12 @@ Website: <a href="https://shop-online-l9o5.onrender.com/product" target="_blank"
 Project demo: <a href="https://clipchamp.com/watch/cLAFDzYb5sr" target="_blank">Shopping Online Demo</a>
 
 # Technologies
-Built with HTML, CSS, Javascript , NodeJS and ExpressJS and Bootstrap.
+Frontend: HTML, CSS, Javascript and Bootstrap.<br></br>
+Backend: NodeJS and ExpressJS.<br></br>
 Database: Mongodb
 
 # Function:
-CRUD users, products.
-Manage carts and orders with admin account
-Create and update carts with user account
+CRUD users, products. <br></br>
+Manage carts and orders with admin account. <br></br>
+Create and update carts with user account.
 
