@@ -2,7 +2,7 @@
 
 # SHOPPING ONLINE
 Website: <a href="https://shop-online-l9o5.onrender.com/product" target="_blank">Shopping Online</a><br></br>
-Project demo: <a href="https://clipchamp.com/watch/cLAFDzYb5sr" target="_blank">Shopping Online Demo</a>
+Project demo: <a href="https://www.youtube.com/watch?v=WkKK_8t3d40" target="_blank">Shopping Online Demo</a>
 
 # Technologies
 Frontend: HTML, CSS, Javascript and Bootstrap.<br></br>
