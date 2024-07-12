@@ -24,8 +24,9 @@
 
 # Features
 <ul>
+  <li>Authenticate users.</li>
   <li>
-    CRUD users, products.
+    Manage products.
   </li>
   <li>
     Manage carts and orders with admin account.
