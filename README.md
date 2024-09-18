@@ -4,9 +4,6 @@
   <li>
     <b>Deploy: </b><a href="https://shop-online-l9o5.onrender.com/product" target="_blank">Shopping Online</a>
   </li>
-  <li>
-    <b>Demo:</b> <a href="https://www.youtube.com/watch?v=WkKK_8t3d40" target="_blank">Shopping Online Demo</a>
-  </li>
 </ul>
 
 # Technologies
