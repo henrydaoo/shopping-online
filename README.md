@@ -31,6 +31,9 @@
   <li>
     Create and update carts with user account.
   </li>
+    <li>
+    Chatbot assistance 
+  </li>
 </ul>
 
 
